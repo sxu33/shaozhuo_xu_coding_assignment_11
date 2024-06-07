@@ -1,0 +1,11 @@
+version: "3"
+services:
+  reactapp:
+    build: .
+    container_name: Shaozhuo_Xu_coding_assignment11
+    ports:
+      - "7775:3000"
+    volumes:
+      - .:/Shaozhuo_Xu_site
+    stdin_open: true
+    tty: true
