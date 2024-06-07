@@ -1,8 +1,8 @@
 FROM node:20.12.2-alpine
 
-WORKDIR /Shaozhuo_Xu_site
+WORKDIR /xu_shaozhuo_site
 
-ENV PATH /Shaozhuo_Xu_site/node_modules/.bin:$PATH
+ENV PATH /xu_shaozhuo_site/node_modules/.bin:$PATH
 
 # install app dependencies
 COPY package.json ./
@@ -14,5 +14,5 @@ RUN npm install react-scripts@3.4.1 -g --silent
 COPY . ./
 
 EXPOSE 7775
-
+ENV PORT=7775
 CMD ["npm", "start"]
